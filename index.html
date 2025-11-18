@@ -56,7 +56,15 @@
     }
   </style>
 </head>
-<body>
+<body style="margin:0;">
+
+  <!-- 表紙（クリックでメイン表示） -->
+  <div id="cover" style="width:100vw; height:100vh; background:url('data:image/jpeg;base64,data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD... (truncated)') center/cover no-repeat; display:flex; align-items:center; justify-content:center;">
+    <h1 style="font-size:3rem; text-shadow:0 2px 8px black;">Snowboard Camp 2025</h1>
+  </div>
+
+  <!-- メイン内容（最初は非表示） -->
+  <div id="main" style="display:none;">
   <header>Snowboard Camp 2025</header>
 
   <section id="point">
@@ -114,6 +122,13 @@
       </ul>
     </details>
   </section>
+  </div>
+
+<script>
+  document.getElementById('cover').addEventListener('click', () => {
+    document.getElementById('cover').style.display = 'none';
+    document.getElementById('main').style.display = 'block';
+  });
+</script>
 
 </body>
-</html>
