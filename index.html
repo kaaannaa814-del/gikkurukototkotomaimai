@@ -1,5 +1,56 @@
-<div class="menu-box">
-    <a href="point.html">-Point-</a>
-    <a href="schedule.html">-schedule-</a>
-    <a href="items.html">-items-</a>
-</div>
+/* 画面全体をカバーする表紙 */
+html,body{
+  height:100%;
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+}
+
+/* cover 要素に背景画像を指定（画像はリポジトリ内のパス） */
+.cover{
+  height:100vh; /* 画面全部を表紙にする */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-image: url('assets/images/cover.jpg'); /* ←ここを実際のパスに変更 */
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover; /* 高さが長い縦画像でも画面にフィットさせる */
+  position:relative;
+}
+
+/* 画像が縦長で特に「縦いっぱいに表示」したい場合はこちらを使う */
+// .cover { background-size: auto 100%; }
+
+.overlay{
+  text-align:center;
+  background: rgba(0,0,0,0.35); /* 文字が読めるように薄い暗めのオーバーレイ */
+  padding: 24px;
+  border-radius: 12px;
+  color: white;
+  max-width: 90%;
+}
+
+.enter-btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  backdrop-filter: blur(4px);
+}
+
+/* スクロール先のセクション */
+.content{
+  padding: 40px 16px;
+  background: #fff;
+  color: #222;
+  min-height: 60vh;
+}
+
+/* レスポンシブ調整（必要なら） */
+@media (max-width:600px){
+  .overlay { padding:16px; }
+  .overlay h1 { font-size:1.4rem; }
+}
