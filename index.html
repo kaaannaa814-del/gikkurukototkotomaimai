@@ -3,58 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>表紙</title>
+  <title>Snowboard Camp 2025</title>
+
   <style>
     html, body {
-      height: 100%;
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: system-ui, sans-serif;
     }
 
-    /* 背景画像の表紙 */
-    .cover {
+    /* 背景画像 */
+    .hero {
       height: 100vh;
+      background-image: url('A_webpage_screenshot_photograph_shows_a_promotiona.png'); 
+      background-size: cover;
+      background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-image: url('S__427376642.jpg'); /* ← あなたの画像！ */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
     }
 
-    /* 文字の背景（読みやすくするための半透明） */
-    .overlay {
-      background: rgba(0, 0, 0, 0.35);
-      padding: 24px;
-      border-radius: 16px;
+    /* 半透明の白枠 */
+    .panel {
+      width: 70%;
+      max-width: 350px;
+      background: rgba(255, 255, 255, 0.45);
+      padding: 30px 20px;
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
       text-align: center;
-      color: #fff;
-      backdrop-filter: blur(3px);
     }
 
-    /* ボタン */
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.25);
+    /* タイトル（画像上の文字と同じ場所で OK） */
+    h1 {
+      font-size: 26px;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    /* メニューボタン */
+    .menu a {
+      display: block;
+      padding: 12px 0;
+      margin: 10px 0;
+      background: rgba(0,0,0,0.55);
       color: #fff;
       text-decoration: none;
       border-radius: 10px;
-      font-size: 16px;
+      font-size: 18px;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="cover">
-    <div class="overlay">
-      <h1>Snow Trip</h1>
-      <p>スケジュールはこちら</p>
-      <a class="btn" href="schedule.html">スケジュールを見る</a>
+  <div class="hero">
+    <div class="panel">
+      <h1>Menu</h1>
+
+      <div class="menu">
+        <a href="schedule.html">Schedule</a>
+        <a href="items.html">Items</a>
+        <a href="point.html">Point</a>
+      </div>
+
     </div>
   </div>
 
