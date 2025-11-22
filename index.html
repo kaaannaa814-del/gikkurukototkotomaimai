@@ -1,45 +1,63 @@
-
 <!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>スケジュール</title>
+  <title>表紙</title>
   <style>
-    body{
-      font-family: system-ui;
-      padding:20px;
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, sans-serif;
     }
-    h1{
-      margin-bottom:10px;
+
+    /* 背景画像の表紙 */
+    .cover {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('S__427376642.jpg'); /* ← あなたの画像！ */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
     }
-    .card{
-      padding:15px;
-      
-      border:1px solid #ddd;
-      border-radius:8px;
-      margin-top:10px;
+
+    /* 文字の背景（読みやすくするための半透明） */
+    .overlay {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 24px;
+      border-radius: 16px;
+      text-align: center;
+      color: #fff;
+      backdrop-filter: blur(3px);
     }
-    a{
-      color:#3366ff;
+
+    /* ボタン */
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.25);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
-  <h1>スケジュール</h1>
 
-  <div class="card">
-    <h2>12月20日</h2>
-    <p>朝 6:00 集合 → スキー場へ</p>
+  <div class="cover">
+    <div class="overlay">
+      <h1>Snow Trip</h1>
+      <p>スケジュールはこちら</p>
+      <a class="btn" href="schedule.html">スケジュールを見る</a>
+    </div>
   </div>
 
-  <div class="card">
-    <h2>12月21日</h2>
-    <p>9:00〜12:00 滑走 / 15:00 温泉</p>
-  </div>
-
-  <p style="margin-top:20px;">
-    <a href="index.html">← 表紙に戻る</a>
-  </p>
 </body>
 </html>
+
