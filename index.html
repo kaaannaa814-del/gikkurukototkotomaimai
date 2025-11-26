@@ -21,3 +21,79 @@
 
 </body>
 </html>
+
+
+ body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", serif;
+  color: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 背景画像 */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: url('https://raw.githubusercontent.com/kaaannaa814-del/gikkurukototkotomaimai/main/images/snowboard115.jpg')
+    no-repeat center center / cover;
+  z-index: -1;
+}
+
+/* タイトル */
+.title {
+  text-align: center;
+  font-size: 64px;
+  margin-top: 60px;
+  font-weight: bold;
+}
+
+/* ガラス風メニュー */
+.menu-box {
+  width: 320px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  text-align: center;
+}
+
+/* ボタン */
+.menu-btn {
+  display: block;
+  margin: 20px 0;
+  font-size: 32px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-btn:hover {
+  opacity: 0.6;
+}
+
+/* 各ページ用 */
+.page-box {
+  width: 75%;
+  margin: 120px auto;
+  padding: 40px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  text-align: center;
+}
+
+.page-box h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+}
