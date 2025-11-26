@@ -1,87 +1,105 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Snowboard Camp 2025</title>
-
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Snowboard Camp 2025 — Updated</title>
 <style>
-html, body {
-  height: 100%;
-  margin: 0;
-}
+  /* Reset */
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-body {
-  background-image: url("https://github.com/kaaannaa814-del/gikkurukototkotomaimai/blob/main/S__427376642.jpg?raw=true");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  /* 背景画像（ローカルアップロード済みファイルを使用） */
+  .bg {
+    position: fixed;
+    inset: 0;
+    background-image: url('/mnt/data/A_promotional_digital_photograph_for_Snowboard_Cam.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
 
-/* 全体 */
-.container {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  color: black;
-}
+  /* コンテンツ全体 */
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 32px 16px;\    box-sizing: border-box;
+  }
 
-/* タイトル */
-.title {
-  position: absolute;
-  top: 80px;
-  width: 100%;
-  text-align: center;
-  font-size: 48px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
+  /* タイトル */
+  .title {
+    margin-top: 48px;
+    text-align: center;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: none;
+    font-family: 'Times New Roman', serif;
+    color: #000; /* 画像によっては黒が読みやすいので暗いシャドウを入れる */
+    font-size: clamp(32px, 8vw, 72px);
+    text-shadow: 0 2px 0 rgba(255,255,255,0.6), 0 6px 20px rgba(0,0,0,0.25);
+  }
 
-/* ガラス風パネル */
-.glass-box {
-  position: absolute;
-  right: 8%;
-  top: 30%;
-  width: 300px;
-  padding: 40px;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-  text-align: center;
-}
+  /* ガラス風パネル */
+  .glass-box {
+    position: absolute;
+    right: 6%;
+    top: 28%;
+    width: 320px;
+    max-width: 40%;
+    padding: 36px 28px;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(10px) saturate(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(120%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    color: #08101a;
+  }
 
-.glass-box p {
-  font-size: 28px;
-  margin: 25px 0;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
+  .glass-box p {
+    margin: 18px 0;
+    font-size: clamp(18px, 3.6vw, 28px);
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  /* モバイル時の位置調整 */
+  @media (max-width: 720px) {
+    .glass-box {
+      position: static;
+      margin-top: 24px;
+      width: calc(100% - 48px);
+      max-width: none;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .title { margin-top: 28px; }
+  }
+
+  /* アクセシビリティ：フォーカス時の見やすさ */
+  a:focus, button:focus { outline: 3px solid rgba(255,255,255,0.6); outline-offset: 3px; }
 </style>
 </head>
-
 <body>
+  <div class="bg" aria-hidden="true"></div>
 
-<div class="container">
+  <div class="container">
+    <header class="title">Snowboard Camp<br>2025</header>
 
-  <div class="title">
-    Snowboard Camp<br>2025
+    <main class="glass-box" role="navigation" aria-label="Camp menu">
+      <p>- Point -</p>
+      <p>- schedule -</p>
+      <p>- items -</p>
+    </main>
   </div>
-
-  <div class="glass-box">
-    <p>- Point -</p>
-    <p>- schedule -</p>
-    <p>- items -</p>
-  </div>
-
-</div>
-
 </body>
 </html>
-
