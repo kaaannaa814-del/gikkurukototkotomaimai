@@ -1,0 +1,115 @@
+/* 全体リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 背景設定 */
+body {
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  color: white;
+  background: url("https://raw.githubusercontent.com/kaaannaa814-del/gikkurukototkotomaimai/main/images/snowboard115.jpg")
+    no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* メインコンテナ（ガラス風） */
+.container {
+  width: 90%;
+  max-width: 900px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 45px 30px;   /* ← ちょい広く */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ タイトル（PC用 少しUP） */
+h1 {
+  font-size: 72px;   /* ← 64 → 72 */
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+}
+
+/* ナビゲーション */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+}
+
+/* ボタン（少し大きく） */
+nav a {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 14px 28px;   /* ← 大きめ */
+  border-radius: 30px;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 18px;     /* ← 追加 */
+}
+
+nav a:hover {
+  background: white;
+  color: black;
+}
+
+/* セクション共通 */
+section {
+  margin-top: 45px;
+}
+
+section h2 {
+  font-size: 40px;   /* ← 36 → 40 */
+  margin-bottom: 18px;
+}
+
+section p,
+section li {
+  font-size: 20px;   /* ← 18 → 20 */
+  line-height: 1.9;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* 📱 スマホ最適化（スマホも少しUP） */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 35px 20px;
+  }
+
+  h1 {
+    font-size: 42px;   /* ← 38 → 42 */
+    letter-spacing: 1px;
+  }
+
+  section h2 {
+    font-size: 30px;   /* ← 26 → 30 */
+  }
+
+  section p,
+  section li {
+    font-size: 18px;   /* ← 16 → 18 */
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  nav a {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+}
