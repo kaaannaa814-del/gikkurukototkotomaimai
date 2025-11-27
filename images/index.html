@@ -1,60 +1,67 @@
-/* ページ全体のリセット */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Snowboard Camp 2025</title>
 
-body {
-  font-family: 'Arial', sans-serif;
-  color: white;
-  text-align: center;
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
 
-  /* 背景画像 */
-  background-image: url("https://github.com/kaaannaa814-del/gikkurukototkotomaimai/blob/main/images/snowboard115.jpg?raw=true");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
+      /* ✅ 正しいGitHub画像URL（raw） */
+      background: url("https://raw.githubusercontent.com/kaaannaa814-del/gikkurukototkotomaimai/main/images/snowboard115.jpg") 
+                  no-repeat center center / cover;
+    }
 
-/* ヘッダーのデザイン */
-header {
-  background-color: rgba(0,0,0,0.5); /* 半透明の黒で文字を見やすく */
-  padding: 30px 20px;
-}
+    .title {
+      margin-top: 120px;
+      font-size: 48px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px black;
+    }
 
-/* タイトル文字を大きく */
-header h1 {
-  font-size: 3rem; /* タイトルを大きく */
-  margin-bottom: 15px;
-}
+    .menu-box {
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
 
-/* ナビゲーション */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
+    .menu-btn {
+      text-decoration: none;
+      color: white;
+      font-size: 24px;
+      border: 2px solid white;
+      padding: 12px 40px;
+      border-radius: 30px;
+      background: rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.5rem; /* メニュー文字を少し大きく */
-}
+    .menu-btn:hover {
+      background: rgba(255,255,255,0.3);
+      color: black;
+    }
+  </style>
+</head>
 
-/* 各セクション */
-section {
-  padding: 100px 20px;
-  background-color: rgba(0,0,0,0.3); /* 半透明で背景を透かす */
-  margin: 20px;
-  border-radius: 15px;
-}
+<body>
 
-/* セクションタイトル文字を大きく */
-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
+  <div class="title">
+    Snowboard Camp<br>2025
+  </div>
+
+  <div class="menu-box">
+    <a href="point.html" class="menu-btn">- Point -</a>
+    <a href="schedule.html" class="menu-btn">- Schedule -</a>
+    <a href="items.html" class="menu-btn">- Items -</a>
+  </div>
+
+</body>
+</html>
